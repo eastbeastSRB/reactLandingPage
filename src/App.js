@@ -6,6 +6,10 @@ import { Discounts } from './Exclusive-discounts';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
+import { MiddleSection } from './components/JumbotronMiddle';
+import { BottomOfPage } from './components/bottompart'
+// import { ChooseCategory } from './components/choosecategory';
+
 
 class App extends Component {
   render() {
@@ -15,14 +19,17 @@ class App extends Component {
         <Jumbotron />
         <Layout>
           <Router>
-            <Switch>
-              
+            <Switch>    
               <Route path="/Exclusive-discounts" component={Discounts} />
+              {/* <Route path="/" component={Home} /> */}
               <Route path="/SignUp" component={SignUp} />
             </Switch>
           </Router>
         </Layout>
         <Home />
+        <MiddleSection />
+        <BottomOfPage />
+        {/* <ChooseCategory /> */}
       </React.Fragment>
     );
   }
