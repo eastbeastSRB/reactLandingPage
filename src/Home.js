@@ -6,7 +6,8 @@ import { ChooseCategory } from './components/choosecategory';
 
 const Styles = styled.div`
     .soillInformation {
-        margin-left: 5%;
+        margin-left: 70px;
+        padding-top: 120px;
     }
 
     .informationLabel {
@@ -18,8 +19,12 @@ const Styles = styled.div`
         font-size: 20px;
     }
 
-    .soilabout {
-        
+    .soillabout {
+        width: 652px;
+        text-align: left;
+        letter-spacing: 0.16px;
+        color: #231F20;
+        opacity: 1;
     }
 
     .apply {
@@ -28,14 +33,26 @@ const Styles = styled.div`
         font-family: Semi Bold 16px/26px Inter;
         letter-spacing: 0.16px;
         color: #231F20;
+        font-weight: 600;
+    }
+
+
+    .outdoorlyPartner {
+        font: Regular 15px/18px Rubik Medium;
+        letter-spacing: 2.25px;
+        color: #231F20;
+        text-transform: uppercase;
+        opacity: 1;
+        font-size: 15px;
+        margin-bottom: 15px;
     }
 `;
 
 export const Home = () => (
     <Styles>
         <div className="soillInformation">
-            <h5 className="text-uppercase"> outdoorly partner </h5>
-            <h1> SO iLL - Climbing, Holds and Gear</h1>
+            <h5 className="outdoorlyPartner"> outdoorly partner </h5>
+            <h1> <b> SO iLL </b> - Climbing, Holds and Gear</h1>
             <div className="informationLabel">
                 <p> SAVE UP TO 65% </p>
                 <p> FREE SHIPPING </p>

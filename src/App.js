@@ -7,7 +7,8 @@ import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
 import { MiddleSection } from './components/JumbotronMiddle';
-import { BottomOfPage } from './components/bottompart'
+import { BottomOfPage } from './components/bottompart';
+import { Footer } from './components/footer';
 // import { ChooseCategory } from './components/choosecategory';
 
 
@@ -29,6 +30,7 @@ class App extends Component {
         <Home />
         <MiddleSection />
         <BottomOfPage />
+        <Footer />
         {/* <ChooseCategory /> */}
       </React.Fragment>
     );

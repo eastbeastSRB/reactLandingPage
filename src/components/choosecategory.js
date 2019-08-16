@@ -7,7 +7,10 @@ import smallcomponent_2 from '../assets/smallcomponent_2.png'
 import smallcomponent_3 from '../assets/smallcomponent_3.png'
 import smallcomponent_4 from '../assets/smallcomponent_4.png'
 
+
 const Styles = styled.div`
+
+    @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');  
 
     .firstcomponent {
         background: url(${smallcomponent_3}) 0% 0% no-repeat padding-box;
@@ -48,6 +51,7 @@ const Styles = styled.div`
         height: 630px;
         width: 630px;
         margin-bottom: -630px;
+        margin-top: 120px;
         border-radius: 4px 0px 0px 4px;
         opacity: 1;
     }
@@ -55,34 +59,70 @@ const Styles = styled.div`
     .components {
         margin-left: 195px;
         margin-right: 0px;
-        padding-left: 86px;
-        width: 1002px;
+        padding-left: 73px;
+        width: 991px;
+    }
+
+    .bigcomponentBtn {
+        width: 178px;
+        height: 48px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        opacity: 1;
+        text-transform: uppercase;
+        border-color: #FFFFFF;
+        margin-top: 552px;
+        margin-left: 210px;
+    }
+
+    .smallcomponentBtn {
+        width: 178px;
+        height: 48px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        opacity: 1;
+        text-transform: uppercase;
+        border-color: #FFFFFF;
+        margin-top: 237px;
+        margin-left: 69px;
+    }
+
+    .buttonTxt {
+        font: Regular 15px/18px Rubik Medium;
+        letter-spacing: 2.25px;
+        color: #231F20;
+        font-size: 14px;
+        font-weight: 500;
     }
 `;
 
 export const ChooseCategory = () => {
     return (
     <Styles>
-        <div className="bigcomponent"></div>
+        <div className="bigcomponent"> <Button className="bigcomponentBtn buttonTxt"> Climbing shoes </Button> </div>
         <Container>
             <div className="components">
             <Row>
                 <Col size="6" sm="4">
                     <div className="firstcomponent">
+                        <Button className="smallcomponentBtn buttonTxt">  Mens Aparel </Button>
                     </div>
                 </Col>
                 <Col size="6" sm="4">
                     <div className="secondcomponent">
+                        <Button className="smallcomponentBtn buttonTxt">  Womens Aparel </Button>
                     </div>
                 </Col>
             </Row>
             <Row>
                 <Col size="6" sm="4">
                     <div className="thirdcomponent">
+                        <Button className="smallcomponentBtn buttonTxt">  Accessories </Button>
                     </div>
                 </Col>
                 <Col size="6" sm="4">
                     <div className="fourthcomponent">
+                        <Button className="smallcomponentBtn buttonTxt">  Lifestyle </Button>
                     </div>
                 </Col>
             </Row>

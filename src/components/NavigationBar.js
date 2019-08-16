@@ -2,12 +2,13 @@ import React from 'react';
 import { Jumbotron as Jumbo, Nav, Navbar, Button, ButtonToolbar} from 'react-bootstrap';
 import styled from 'styled-components';
 import outdoorlyFooter from '../assets/outdoorlyFooter.png'
+import media from 'styled-media-query';
 
 const Styles = styled.div`
 
     .jumbo {
         background: url(${outdoorlyFooter}) 0% 0% no-repeat padding-box;
-        width: 8%;
+        width: 130px;
         position: relative;
         top: 75px;
         left: 10px;
@@ -37,6 +38,16 @@ const Styles = styled.div`
         height: 64px;
     }
 
+    .discountTxt {
+        text-align: left;
+        font: Regular 13px/15px Rubik Medium;
+        letter-spacing: 1.95px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        padding-top: 20px;
+        opacity: 1;
+    }
+
     .signTxt {
         font: Regular 15px/18px Rubik Medium;
         letter-spacing: 2.25px;
@@ -48,16 +59,31 @@ const Styles = styled.div`
     }
 `
 
+const MediaQuery = styled.div`
+    ${media.lessThan('small')`
+        .jumbo {
+            margin-top: -10%;
+            margin-left: 0%;
+        }
+        .signUpBtn {
+            margin-left:-264%;
+        }
+
+    `}
+`;
+
 export const NavigationBar = () => (
+    <MediaQuery>
     <Styles>
         <Navbar expand="lg" fixed="top">
-            <Jumbo className="jumbo"> <Navbar.Brand href="/"></Navbar.Brand> </Jumbo>
-            <Navbar.Toggle aria-controls="soill-navbar-nav"/>
+            <Jumbo className="jumbo">  <a href="/home"> <Navbar.Brand href="/"></Navbar.Brand> </a> </Jumbo>
+            {/* <Navbar.Toggle aria-controls="soill-navbar-nav"/> */}
             <Navbar.Collapse id="soill-navbar-nav" />
                 <Nav className="ml-auto">
-                    <Nav.Item> <Nav.Link href="/exclusive-discounts"> ACCESS EXCLUCIVE DISCOUNTS </Nav.Link> </Nav.Item>
-                    <Nav.Item className="signUpBtn"> <Nav.Link href="signup" className="signTxt"> SIGN UP </Nav.Link> </Nav.Item>
+                    <Nav.Item> <Nav.Link href="/exclusive-discounts" className="discountTxt"> ACCESS EXCLUCIVE DISCOUNTS </Nav.Link> </Nav.Item>
+                    <Nav.Item className="signUpBtn"> <Nav.Link href="https://outdoorly.com/signup" className="signTxt"> SIGN UP </Nav.Link> </Nav.Item>
                 </Nav>
         </Navbar>
     </Styles>
+    </MediaQuery>
 )

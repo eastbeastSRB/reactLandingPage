@@ -1,50 +1,78 @@
 import React from 'react';
 import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import climbWall from '../assets/climbWall.jpg';
-import outdoorlyLogo from '../assets/outdoorlyLogo.svg'
-import soillLogo from '../assets/soillLogo.jpg'
+import outdoorlyLogo from '../assets/outdoorlyLogo.png';
+import soilllogo from '../assets/soilllogo.png';
 
 const Styles = styled.div`
     .jumbo {
-        background: url(${climbWall}) no-repeat fixed bottom;
+        background: url(${climbWall}) 0% 0% no-repeat padding-box;
+        opacity: 1;
         background-size: cover;
         color: #efefef;
-        height: 400px;
+        padding-bottom: 161px;
         position: relative;
-        z-index: -2;
+        
     }
 
-    .overlay {
-        background-color: #000;
-        opacity: 0.5;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -2;
+    .homeSectionDiv {
+        text-align: center;
+        margin-top: 151px;
     }
 
+    .homeTxt {
+        font-size: 70px;
+    }
     .logo1 {
-        background: url(${outdoorlyLogo}) no-repeat
+        width: 200px;
+        height: 51px;
+        margin-left: 31%;
+        margin-bottom: 40px;
+        background: transparent url(${outdoorlyLogo}) 0% 0% no-repeat padding-box;
+        opacity: 1;
+        padd
     }
     .logo2 {
-        background: url(${soillLogo}) no-repeat
+        background: url(${soilllogo}) 0% 0% no-repeat padding-box;
+        width: 170px;
+        height: 39px;
+        margin-top: 6px;
+        margin-left: 3%;
+    }
+
+    .logos {
+        display: flex;
     }
 `;
 
+const MediaQuery = styled.div`
+    ${media.lessThan('small')`
+        .jumbo {
+            width: 100%;
+        }
+        .signUpBtn {
+            
+        }
+    `}
+`;
+
 export const Jumbotron = () => (
+    <MediaQuery>
     <Styles>
         <Jumbo fluid className="jumbo">
-            <div className="overlay">
-                <div className="logo1"> </div>
-                <div className="logo2"> </div>
-            </div>
             <Container>
-                <h1 className="text-center mt-5"> LET'S TAKE HOLD </h1>
-                <h1 className="text-center"> TOGETHER </h1>
+                <div className="homeSectionDiv">
+                    <div className="logos">
+                        <div className="logo1"></div>
+                        <div className="logo2"></div>
+                    </div>
+                    <h1 className="homeTxt"> LET'S TAKE HOLD </h1>
+                    <h1 className="homeTxt"> TOGETHER </h1>
+                </div>
             </Container>
         </Jumbo>
     </Styles>
+    </MediaQuery>
 )
