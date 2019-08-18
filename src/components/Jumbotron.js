@@ -7,7 +7,7 @@ import outdoorlyLogo from '../assets/outdoorlyLogo.png';
 import soilllogo from '../assets/soilllogo.png';
 
 const Styles = styled.div`
-    .jumbo {
+    .homeSectionWall {
         background: url(${climbWall}) 0% 0% no-repeat padding-box;
         opacity: 1;
         background-size: cover;
@@ -55,13 +55,26 @@ const MediaQuery = styled.div`
         .signUpBtn {
             
         }
+        .homeSectionWall {
+            margin-left: -145%;
+            height: 444px;
+        }
+        .homeSectionDiv {
+            margin-top: 85px;
+            margin-left: 43%;
+
+        }
+        .homeTxt {
+            font-size: 50px;
+            padding-left: 30%;
+        }
     `}
 `;
 
 export const Jumbotron = () => (
     <MediaQuery>
     <Styles>
-        <Jumbo fluid className="jumbo">
+        <Jumbo fluid className="homeSectionWall">
             <Container>
                 <div className="homeSectionDiv">
                     <div className="logos">

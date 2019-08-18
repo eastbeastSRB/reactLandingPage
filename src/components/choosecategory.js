@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import bigcomponent_1 from '../assets/bigcomponent_1.png'
 import smallcomponent_1 from '../assets/smallcomponent_1.png'
@@ -96,8 +97,27 @@ const Styles = styled.div`
     }
 `;
 
+const MediaQuery = styled.div`
+    ${media.lessThan('small')`
+        .bigcomponent {
+            display: inline-flex;
+            margin-left: -34%;
+            margin-bottom: 0%;
+        }
+        .components {
+            margin-left: -35%;
+        }
+        .firstcomponent {
+            height: 415px;
+            width: 46%;
+        }
+    `}
+`;
+
+
 export const ChooseCategory = () => {
     return (
+    <MediaQuery>
     <Styles>
         <div className="bigcomponent"> <Button className="bigcomponentBtn buttonTxt"> Climbing shoes </Button> </div>
         <Container>
@@ -129,5 +149,6 @@ export const ChooseCategory = () => {
             </div>
         </Container>
     </Styles>
+    </MediaQuery>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ChooseCategory } from './components/choosecategory';
 
@@ -48,7 +49,28 @@ const Styles = styled.div`
     }
 `;
 
+const MediaQuery = styled.div`
+    ${media.lessThan('small')`
+    .soillInformation {
+        margin-left: 30px;
+        padding-top: 30px;
+    }
+    .informationLabel {
+        display: inline;
+    }
+    .soillabout {
+        width: 100%;
+        text-align: inherit;
+    }
+    .homeTxt {
+        padding-left: 0px;
+    }
+    `}
+`;
+
+
 export const Home = () => (
+    <MediaQuery>
     <Styles>
         <div className="soillInformation">
             <h5 className="outdoorlyPartner"> outdoorly partner </h5>
@@ -58,7 +80,7 @@ export const Home = () => (
                 <p> FREE SHIPPING </p>
                 <p> 14 CATEGORIES </p>
             </div>
-            <Container>
+            <Container className="homeTxt">
             <Row>
                 <Col xs="auto">
                     <p className="soillabout"> Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. 
@@ -74,4 +96,5 @@ export const Home = () => (
             <ChooseCategory />
         </div>
     </Styles>
+    </MediaQuery>
 )

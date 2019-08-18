@@ -61,12 +61,23 @@ const Styles = styled.div`
 
 const MediaQuery = styled.div`
     ${media.lessThan('small')`
+
+        .navbar {
+            width: 100%;
+        }
+
         .jumbo {
-            margin-top: -10%;
+            margin-top: -16.5%;
             margin-left: 0%;
         }
         .signUpBtn {
-            margin-left:-264%;
+            margin-top: -8px;
+            margin-right: -1px;
+        }
+
+
+        .discountTxt {
+            display:none;
         }
 
     `}
