@@ -103,13 +103,14 @@ const MediaQuery = styled.div`
             display: inline-flex;
             margin-left: -34%;
             margin-bottom: 0%;
+            margin-top:10%;
         }
         .components {
-            margin-left: -35%;
+            margin-left: -45%;
         }
         .firstcomponent, .secondcomponent, .thirdcomponent, .fourthcomponent {
-            height: 415px;
-            width: 46%;
+            height: 480px;
+            width: 56%;
         }
         .smallcomponentBtn {
             margin-top: 76%;

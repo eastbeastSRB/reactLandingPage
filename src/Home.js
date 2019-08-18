@@ -57,6 +57,7 @@ const MediaQuery = styled.div`
     }
     .informationLabel {
         display: inline;
+        margin: 2%;
     }
     .soillabout {
         width: 100%;
@@ -66,6 +67,9 @@ const MediaQuery = styled.div`
         padding-left: 0px;
     }
     `}
+    #chag {
+        font-size:55px;
+    }
 `;
 
 
@@ -74,7 +78,7 @@ export const Home = () => (
     <Styles>
         <div className="soillInformation">
             <h5 className="outdoorlyPartner"> outdoorly partner </h5>
-            <h1> <b> SO iLL </b> - Climbing, Holds and Gear</h1>
+            <h1 id="chag"> <b> SO iLL </b> - Climbing, Holds and Gear</h1>
             <div className="informationLabel">
                 <p> SAVE UP TO 65% </p>
                 <p> FREE SHIPPING </p>

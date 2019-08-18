@@ -24,7 +24,6 @@ const Styles = styled.div`
 
     .homeTxt {
         font-size: 70px;
-        font-family: 'Rubik';
     }
     .logo1 {
         width: 200px;
@@ -67,6 +66,7 @@ const MediaQuery = styled.div`
         .homeTxt {
             font-size: 50px;
             padding-left: 30%;
+            font-weight:bold;
         }
     `}
 `; 

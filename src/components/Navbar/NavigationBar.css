@@ -1,9 +1,10 @@
-.jumbo {
+.headerlogo {
     background: url('../../assets/outdoorlyFooter.png') 0% 0% no-repeat padding-box;
     width: 130px;
     position: relative;
-    top: 75px;
+    top: 0px;
     left: 10px;
+    height: 35px;
 }
 
 .navbar {
