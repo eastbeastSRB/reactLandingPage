@@ -107,9 +107,13 @@ const MediaQuery = styled.div`
         .components {
             margin-left: -35%;
         }
-        .firstcomponent {
+        .firstcomponent, .secondcomponent, .thirdcomponent, .fourthcomponent {
             height: 415px;
             width: 46%;
+        }
+        .smallcomponentBtn {
+            margin-top: 76%;
+            margin-left: 28%;
         }
     `}
 `;

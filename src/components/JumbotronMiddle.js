@@ -1,10 +1,11 @@
 import React from 'react';
-import { Jumbotron as Jumbo, Container, Button } from 'react-bootstrap';
+import { Jumbotron as Jumbo, Button } from 'react-bootstrap';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import climbwallSecond from '../assets/climbwallSecond.jpg';
 
 const Styles = styled.div`
-    .jumbo {
+    .middleWallImg {
         background: url(${climbwallSecond}) 0% 0% no-repeat padding-box;
         opacity: 1;
         background-size: cover;
@@ -47,9 +48,31 @@ const Styles = styled.div`
 `;
 
 
+const MediaQuery = styled.div`
+    ${media.lessThan('small')`
+        .middleWallImg{
+            height: 610px;
+            margin-top: 15%;
+            margin-left: -30%;
+        }
+        .information-label {
+            margin-left: 30%;
+            margin-top: 25%;
+        }
+        .discountBtn{
+            letter-spacing: 2px;
+        }
+        .discTxt {
+            font-size:14px;
+        }
+    `}
+`;
+
+
 export const MiddleSection = () => (
+    <MediaQuery>
     <Styles>
-        <Jumbo fluid className="jumbo">
+        <Jumbo fluid className="middleWallImg">
             <div className="overlay">
             </div>
             <div className="information-label">
@@ -64,4 +87,5 @@ export const MiddleSection = () => (
             </div>
         </Jumbo>
     </Styles>
+    </MediaQuery>
 )

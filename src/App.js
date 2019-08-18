@@ -4,7 +4,7 @@ import { Home } from './Home';
 import { SignUp } from './SignUp';
 import { Discounts } from './Exclusive-discounts';
 import { Layout } from './components/Layout';
-import { NavigationBar } from './components/NavigationBar';
+import { NavigationBar } from './components/Navbar/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
 import { MiddleSection } from './components/JumbotronMiddle';
 import { BottomOfPage } from './components/bottompart';

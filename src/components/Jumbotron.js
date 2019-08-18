@@ -79,6 +79,7 @@ export const Jumbotron = () => (
                 <div className="homeSectionDiv">
                     <div className="logos">
                         <div className="logo1"></div>
+                        <span>&#43;</span>
                         <div className="logo2"></div>
                     </div>
                     <h1 className="homeTxt"> LET'S TAKE HOLD </h1>

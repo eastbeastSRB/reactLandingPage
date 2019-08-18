@@ -1,6 +1,7 @@
 import React from 'react';
 import { Jumbotron as Jumbo, Container, Button } from 'react-bootstrap';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import soilllogoBlack from '../assets/soilllogoBlack.png';
 
 const Style = styled.div`
@@ -54,7 +55,20 @@ const Style = styled.div`
     }
 `;
 
+
+const MediaQuery = styled.div`
+    ${media.lessThan('small')`
+        .soilLogo {
+            margin-left:28%;
+        }
+        .signUpBtn {
+            margin-left:34%;
+        }
+    `}
+`;
+
 export const BottomOfPage = () => (
+    <MediaQuery>
     <Style>
         <div className="botompart">
             <div className="soilLogo"> </div>
@@ -63,4 +77,5 @@ export const BottomOfPage = () => (
             <Button className="signUpBtn"> Sign up</Button>
         </div>
     </Style>
+    </MediaQuery>
 )

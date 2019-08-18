@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 
 const Style = styled.div`
@@ -36,15 +37,27 @@ const Style = styled.div`
         float: right;
 
     }
+`;
 
-
+const MediaQuery = styled.div`
+    ${media.lessThan('small')`
+    .doorly {
+        margin-left:22%;
+    }
+    .terms {
+        float: none;
+        margin-left:20%;
+    }
+    `}
 `;
 
 export const Footer = () => (
+    <MediaQuery>
     <Style>
         <div className="footer">
             <p className="doorly"> &#169;  OUTDOORLY </p>
             <a href="/#"> <p className="terms"> TERMS | PRIVACY  </p> </a>
         </div>
     </Style>
+    </MediaQuery>
 )
