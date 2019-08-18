@@ -69,7 +69,7 @@ const MediaQuery = styled.div`
             padding-left: 30%;
         }
     `}
-`;
+`; 
 
 export const Jumbotron = () => (
     <MediaQuery>
