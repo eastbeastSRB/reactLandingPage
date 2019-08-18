@@ -13,6 +13,7 @@ const Styles = styled.div`
     }
     .navbar-brand, .navbar-nav .nav-link {
         color: #FFFFFF;
+
         &:hover {
             color:#FFFFFF; 
         }

@@ -24,6 +24,7 @@ const Styles = styled.div`
 
     .homeTxt {
         font-size: 70px;
+        font-family: 'Rubik';
     }
     .logo1 {
         width: 200px;
@@ -32,7 +33,6 @@ const Styles = styled.div`
         margin-bottom: 40px;
         background: transparent url(${outdoorlyLogo}) 0% 0% no-repeat padding-box;
         opacity: 1;
-        padd
     }
     .logo2 {
         background: url(${soilllogo}) 0% 0% no-repeat padding-box;
