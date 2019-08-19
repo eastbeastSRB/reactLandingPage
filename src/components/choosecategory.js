@@ -94,6 +94,7 @@ const Styles = styled.div`
         border-color: #FFFFFF;
         margin-top: 237px;
         margin-left: 69px;
+        
     }
 
     .buttonTxt {
@@ -136,10 +137,10 @@ const MediaQuery = styled.div`
             width: 46%;
         }
         .components {
-            margin-left: -48%;
+            margin-left: -47%;
         }
         .bigcomponent {
-            margin-left: -46%;
+            margin-left: -45%;
         }
     `}
 `;

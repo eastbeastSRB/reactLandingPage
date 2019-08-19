@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron as Jumbo, Container, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import soilllogoBlack from '../assets/soilllogoBlack.png';
@@ -29,6 +29,7 @@ const Style = styled.div`
         letter-spacing: 0;
         color: #231F20;
         opacity: 1;
+        margin-bottom: 0px;
     }
 
     .signUpBtn{

@@ -46,6 +46,7 @@ const Styles = styled.div`
         opacity: 1;
         font-size: 15px;
         margin-bottom: 15px;
+        font-weight: bold;
     }
 `;
 

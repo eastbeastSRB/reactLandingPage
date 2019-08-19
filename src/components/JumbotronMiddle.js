@@ -30,6 +30,7 @@ const Styles = styled.div`
         opacity: 0.45;
         border-color:  #000000;
         color: #FFFFFF;
+        letter-spacing: 2.25px;
     }
     
     .discTitle {
