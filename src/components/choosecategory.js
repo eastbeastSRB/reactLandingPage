@@ -58,7 +58,7 @@ const Styles = styled.div`
     }
 
     .components {
-        margin-left: 195px;
+        margin-left: 303px;
         margin-right: 0px;
         padding-left: 73px;
         width: 991px;
@@ -111,6 +111,7 @@ const MediaQuery = styled.div`
         .firstcomponent, .secondcomponent, .thirdcomponent, .fourthcomponent {
             height: 480px;
             width: 56%;
+            background-size: contain;
         }
         .smallcomponentBtn {
             margin-top: 76%;

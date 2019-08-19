@@ -7,7 +7,7 @@ import { ChooseCategory } from './components/choosecategory';
 
 const Styles = styled.div`
     .soillInformation {
-        margin-left: 70px;
+        margin-left: 15%;
         padding-top: 120px;
     }
 

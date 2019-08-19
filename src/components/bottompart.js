@@ -24,8 +24,7 @@ const Style = styled.div`
 
     .secondTxt {
         text-align: left;
-        font: Semi Bold 16px/24px Inter;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: bold;
         letter-spacing: 0;
         color: #231F20;

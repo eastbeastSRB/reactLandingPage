@@ -46,7 +46,7 @@ export const NavigationBar = () => (
         <Navbar expand="lg" fixed="top">
             <div className={classes.headerlogo}>  <a href="/home"> <Navbar.Brand href="/"></Navbar.Brand> </a> </div>
             {/* <Navbar.Toggle aria-controls="soill-navbar-nav"/> */}
-            <Navbar.Collapse id="soill-navbar-nav" /> 
+            {/* <Navbar.Collapse id="soill-navbar-nav" />  */}
                 <Nav className="ml-auto">
                     <Nav.Item> <Nav.Link href="/exclusive-discounts" className={classes.discountTxt}> ACCESS EXCLUCIVE DISCOUNTS </Nav.Link> </Nav.Item>
                     <Nav.Item className={classes.signUpBtn}> <Nav.Link href="https://outdoorly.com/signup" className={classes.signTxt}> SIGN UP </Nav.Link> </Nav.Item>

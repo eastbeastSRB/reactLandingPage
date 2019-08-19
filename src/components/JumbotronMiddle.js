@@ -9,7 +9,8 @@ const Styles = styled.div`
         background: url(${climbwallSecond}) 0% 0% no-repeat padding-box;
         opacity: 1;
         background-size: cover;
-        height: 560px;
+        height: 670px;
+        // height: 560px;
         // width: 1400px;
         margin-top: 5%
     }

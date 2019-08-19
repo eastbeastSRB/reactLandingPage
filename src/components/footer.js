@@ -15,7 +15,6 @@ const Style = styled.div`
         width: 134px;
         height: 14px;
         text-align: left;
-        font: Regular 12px/14px Rubik;
         font-size: 12px;
         letter-spacing: 1.8px;
         color: #231F20;
@@ -29,7 +28,7 @@ const Style = styled.div`
         height: 14px;
         text-align: left;
         font: Regular 12px/14px Rubik;
-        font-size: 12px;
+        font-size: 11px;
         letter-spacing: 1.8px;
         color: #231F20;
         text-transform: uppercase;
