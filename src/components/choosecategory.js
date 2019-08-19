@@ -127,6 +127,9 @@ const MediaQuery = styled.div`
             font-weight: bold; 
         }
     `}
+    ${media.between('medium', 'large')`
+        
+    `}
     ${breakpoint.between('us','xs')`
         .firstcomponent, .secondcomponent, .thirdcomponent, .fourthcomponent {
             height: 423px;

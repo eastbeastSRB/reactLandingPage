@@ -70,6 +70,18 @@ const MediaQuery = styled.div`
     #chag {
         font-size:55px;
     }
+    ${media.between('medium', 'large')`
+        .informationLabel {
+            display: contents;
+        }
+        .soillInformation {
+            margin-left: 10%;
+            padding-top: 50px;
+        }
+        .homeTxt {
+            padding-left: 0px;
+        }
+    `}
 `;
 
 

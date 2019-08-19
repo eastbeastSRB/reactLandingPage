@@ -60,6 +60,14 @@ const MediaQuery = styled.div`
             margin-top: 1%;
         }
     `}
+    ${media.between('medium', 'large')`
+        .${classes.discountTxt} {
+            display:none;
+        }
+        .${classes.signUpBtn} {
+            margin-top: -6%;
+        }
+    `}
 `;
 
 export const NavigationBar = () => (

@@ -77,7 +77,7 @@ const MediaQuery = styled.div`
             font-weight:bold;
         }
         .logos {
-            margin-right: -20%;
+            margin-right: -15%;
         }
         #logo1 {
             background: url(${responsiveOutdoorlyLogo});
@@ -93,6 +93,11 @@ const MediaQuery = styled.div`
         #plusSign {
             font-size: 30px;
             margin-top: -1%;
+        }
+    `}
+    ${media.between('medium' , 'large')`
+        .homeSectionWall {
+            margin-left: -85%;
         }
     `}
     ${breakpoint.lessThan('xs')`
