@@ -2,10 +2,16 @@ import React from 'react';
 import { Nav, Navbar} from 'react-bootstrap';
 import classes from './NavigationBar.css';
 import styled from 'styled-components';
-import media from 'styled-media-query';
+import media, { generateMedia } from 'styled-media-query';
+
+const breakpoint = generateMedia ({
+    xs: '380px',
+    sm: "450px",
+    md: "768px",
+    lg: "1200px"
+})
 
 const Styles = styled.div`
-    
     .navbar {
         background-color: #222;
         height: 64px;
@@ -13,16 +19,14 @@ const Styles = styled.div`
     }
     .navbar-brand, .navbar-nav .nav-link {
         color: #FFFFFF;
-
         &:hover {
             color:#FFFFFF; 
         }
-    }
-            
+    }     
 `;
 
 const MediaQuery = styled.div`
-    ${media.lessThan('small')`
+    ${breakpoint.lessThan('xs')`
         .${classes.navbar} {
             width: 100%;
         }
@@ -36,6 +40,24 @@ const MediaQuery = styled.div`
         }
         .${classes.discountTxt} {
             display:none;
+        }
+    `}
+    ${media.lessThan('small')`
+        .${classes.headerlogo}{
+            top: -3px;
+        }
+        .${classes.navbar} {
+            width: 100%;
+        }   
+        .${classes.signUpBtn} {
+            margin-top: -8px;
+            margin-right: -1px;
+        }
+        .${classes.discountTxt} {
+            display:none;
+        }
+        .${classes.signTxt}{
+            margin-top: 1%;
         }
     `}
 `;

@@ -10,7 +10,6 @@ const Style = styled.div`
         opacity: 1;
         padding: 15px 100px;
     }
-
     .doorly {
         width: 134px;
         height: 14px;
@@ -22,7 +21,6 @@ const Style = styled.div`
         opacity: 1;
         float: left;
     }
-
     .terms {
         width: 122px;
         height: 14px;
@@ -34,18 +32,21 @@ const Style = styled.div`
         text-transform: uppercase;
         opacity: 0.5;
         float: right;
-
     }
 `;
-
 const MediaQuery = styled.div`
     ${media.lessThan('small')`
+    .footer {
+        padding: 0px;
+        padding-left: 37%;
+    }
     .doorly {
         margin-left:22%;
+        display: contents;
     }
     .terms {
         float: none;
-        margin-left:20%;
+        margin-left:0%;
     }
     `}
 `;

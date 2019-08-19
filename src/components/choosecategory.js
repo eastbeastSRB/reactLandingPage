@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from 'styled-media-query';
+import media, { generateMedia } from 'styled-media-query';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import bigcomponent_1 from '../assets/bigcomponent_1.png'
-import smallcomponent_1 from '../assets/smallcomponent_1.png'
-import smallcomponent_2 from '../assets/smallcomponent_2.png'
-import smallcomponent_3 from '../assets/smallcomponent_3.png'
-import smallcomponent_4 from '../assets/smallcomponent_4.png'
+import bigcomponent_1 from '../assets/bigcomponent_1.png';
+import smallcomponent_1 from '../assets/smallcomponent_1.png';
+import smallcomponent_2 from '../assets/smallcomponent_2.png';
+import smallcomponent_3 from '../assets/smallcomponent_3.png';
+import smallcomponent_4 from '../assets/smallcomponent_4.png';
+
+const breakpoint = generateMedia ({
+    us: '320px',
+    xs: '380px',
+    sm: "450px",
+    md: "768px",
+    lg: "1200px"
+})
 
 
 const Styles = styled.div`
@@ -93,7 +101,7 @@ const Styles = styled.div`
         letter-spacing: 2.25px;
         color: #231F20;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: bold;
     }
 `;
 
@@ -101,12 +109,12 @@ const MediaQuery = styled.div`
     ${media.lessThan('small')`
         .bigcomponent {
             display: inline-flex;
-            margin-left: -34%;
+            margin-left: -33%;
             margin-bottom: 0%;
             margin-top:10%;
         }
         .components {
-            margin-left: -45%;
+            margin-left: -41%;
         }
         .firstcomponent, .secondcomponent, .thirdcomponent, .fourthcomponent {
             height: 480px;
@@ -116,6 +124,19 @@ const MediaQuery = styled.div`
         .smallcomponentBtn {
             margin-top: 76%;
             margin-left: 28%;
+            font-weight: bold; 
+        }
+    `}
+    ${breakpoint.between('us','xs')`
+        .firstcomponent, .secondcomponent, .thirdcomponent, .fourthcomponent {
+            height: 423px;
+            width: 46%;
+        }
+        .components {
+            margin-left: -48%;
+        }
+        .bigcomponent {
+            margin-left: -46%;
         }
     `}
 `;

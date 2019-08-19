@@ -5,7 +5,7 @@ import { SignUp } from './SignUp';
 import { Discounts } from './Exclusive-discounts';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/Navbar/NavigationBar';
-import { Jumbotron } from './components/Jumbotron';
+import { HomeSection } from './components/HomeSection';
 import { MiddleSection } from './components/JumbotronMiddle';
 import { BottomOfPage } from './components/bottompart';
 import { Footer } from './components/footer';
@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavigationBar />
-        <Jumbotron />
+        <HomeSection />
         <Layout>
           <Router>
             <Switch>    
